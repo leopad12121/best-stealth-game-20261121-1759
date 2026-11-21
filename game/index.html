@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lantern Archive — a stealth game</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #020617;
+    color: #f8fafc;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #wrap { position: relative; width: 1280px; height: 720px; }
+  canvas { display: block; width: 1280px; height: 720px; background: #1e293b; cursor: crosshair; }
+  .screen {
+    position: absolute; inset: 0;
+    background: rgba(2, 6, 23, 0.82);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 40px;
+  }
+  .hidden { display: none; }
+  h1 {
+    font-size: 52px; letter-spacing: 6px; color: #fbbf24;
+    text-shadow: 0 0 24px rgba(251, 191, 36, 0.45);
+    margin-bottom: 18px;
+  }
+  .tag { font-size: 20px; line-height: 1.5; color: #e2e8f0; margin-bottom: 22px; }
+  .rules { font-size: 17px; line-height: 1.7; color: #cbd5e1; margin-bottom: 26px; }
+  .rules b { color: #fde68a; }
+  .score { font-size: 22px; color: #fde68a; margin-bottom: 24px; }
+  button {
+    font-family: Georgia, serif; font-size: 22px; letter-spacing: 1px;
+    background: #b45309; color: #fffbeb;
+    border: 2px solid #fbbf24; border-radius: 8px;
+    padding: 14px 34px; cursor: pointer;
+  }
+  button:hover { background: #d97706; }
+  .hint { margin-top: 18px; font-size: 15px; color: #94a3b8; font-style: italic; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="overlay" class="screen"></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
